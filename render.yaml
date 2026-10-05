@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: spark-hack-atlas
+    runtime: static
+    buildCommand: echo "no build needed"
+    staticPublishPath: ./
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+      - path: /*
+        name: Cache-Control
+        value: no-cache
